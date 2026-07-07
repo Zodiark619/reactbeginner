@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\controllers\\project1financetracker\\project1financetrackercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\controllers\\project1financetracker\\project1financetrackercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\services\\financetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\services\\financetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\repositories\\financetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\repositories\\financetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\services\\ifinancetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\services\\ifinancetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\repositories\\ifinancetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\repositories\\ifinancetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +50,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\WeatherForecast.cs",
-              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\WeatherForecast.cs",
-              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T15:44:23.634Z",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-07T10:57:14.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBcAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Program.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Program.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T15:40:26.498Z",
+              "WhenOpened": "2026-07-07T10:55:41.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Project1FinanceTrackerController.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T10:41:44.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FinanceTrackerService.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T09:50:14.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IFinanceTrackerService.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T09:50:05.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FinanceTrackerRepository.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T09:36:29.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IFinanceTrackerRepository.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T09:36:19.534Z",
               "EditorCaption": ""
             }
           ]

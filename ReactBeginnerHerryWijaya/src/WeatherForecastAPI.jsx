@@ -1,23 +1,36 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-
+import { useQuery } from "@tanstack/react-query";
+import { getWeather } from "./api/WeatherForecastAPI";
 function WeatherForecastAPI() {
-  const [weather, setWeather] = useState([]);
-  const getWeather = async () => {
-    try {
-      const response = await axios.get(
-        "https://localhost:5000/weatherforecast",
-      );
+  const {
+    data: weather = [],
+    isLoading,
+    error,
+    refetch,
+  } = useQuery({
+    queryKey: ["weather"],
+    queryFn: getWeather,
+  });
 
-      setWeather(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  if (isLoading) return <p>Loading...</p>;
 
-  useEffect(() => {
-    getWeather();
-  }, []);
+  if (error) return <p>Something went wrong.</p>;
+
+  // const [weather, setWeather] = useState([]);
+  // const getWeather = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://localhost:5000/weatherforecast",
+  //     );
+
+  //     setWeather(response.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   getWeather();
+  // }, []);
 
   const result = weather.map((item, index) => {
     return (
@@ -45,7 +58,8 @@ function WeatherForecastAPI() {
         {result}
       </div>
       <div className="d-flex justify-content-center mt-3">
-        <button className="btn btn-primary" onClick={getWeather}>
+        {/* <button className="btn btn-primary" onClick={getWeather}> */}
+        <button className="btn btn-primary" onClick={() => refetch()}>
           Refresh Weather
         </button>
       </div>

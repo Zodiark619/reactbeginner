@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker.Project1FinanceTrackerController",
+    "Method": "GenerateRandomFinances",
+    "RelativePath": "api/Project1FinanceTracker/generateRandom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "count",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebAPIBeginnerHerryWijaya.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
