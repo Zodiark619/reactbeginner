@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2dCIs3InyCg=",
+  "success": true,
+  "projectFilePath": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IMBA PC\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.15\\microsoft.aspnetcore.openapi.9.0.15.nupkg.sha512",
+    "C:\\Users\\IMBA PC\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
