@@ -6,7 +6,7 @@ namespace WebAPIBeginnerHerryWijaya.Repositories
     {
         Task<IEnumerable<Finance>> GetAllAsync();
         Task AddAsync(Finance finance);
-
+        Task<bool> DeleteAsync(int id);
         Task SaveChangesAsync();    
     }
 }

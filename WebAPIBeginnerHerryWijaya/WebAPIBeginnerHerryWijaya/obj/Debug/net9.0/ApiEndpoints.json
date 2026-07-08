@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker.Project1FinanceTrackerController",
+    "Method": "GetAllFinances",
+    "RelativePath": "api/Project1FinanceTracker",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker.Project1FinanceTrackerController",
+    "Method": "DeleteFinance",
+    "RelativePath": "api/Project1FinanceTracker/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker.Project1FinanceTrackerController",
     "Method": "GenerateRandomFinances",
     "RelativePath": "api/Project1FinanceTracker/generateRandom",
     "HttpMethod": "POST",

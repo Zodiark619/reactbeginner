@@ -18,6 +18,18 @@ namespace WebAPIBeginnerHerryWijaya.Repositories
        
         }
 
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var finance = _applicationDb.Finances.FirstOrDefault(f => f.Id == id);
+            if (finance == null)
+            {
+                return false; // or throw a custom NotFound exception
+            }
+            _applicationDb.Finances.Remove(finance);
+            await _applicationDb.SaveChangesAsync();
+            return true;
+        }
+
         public async Task<IEnumerable<Finance>> GetAllAsync()
         {
            var finances =await _applicationDb.Finances.ToListAsync();

@@ -21,6 +21,23 @@ namespace WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker
             _financeTrackerService = financeTrackerService;
             _financeTrackerRepository = financeTrackerRepository;
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteFinance(int id)
+        {
+            var deleted=  await _financeTrackerRepository.DeleteAsync(id);
+            if (!deleted)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAllFinances()
+        {
+            var finances = await _financeTrackerRepository.GetAllAsync();
+            return Ok(finances);
+        }
         [HttpPost("generateRandom")]
         public async Task<IActionResult> GenerateRandomFinances([FromQuery]int count)
         {
