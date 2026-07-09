@@ -43,5 +43,76 @@ namespace WebAPIBeginnerHerryWijaya.Services
             await _financeTrackerRepository.SaveChangesAsync();
             return finances;
         }
+
+        public async Task<MonthlyDashboardDto> GetMonthlyDashboardAsync(int year, int month)
+        {
+            var monthlyFinance = await _financeTrackerRepository.GetByMonthAsync(year,month);
+
+            var totalIncome = monthlyFinance
+    .Where(f => f.FinanceType == Constant.Income)
+    .Sum(f => f.Amount);
+
+            var totalExpense = monthlyFinance
+                .Where(f => f.FinanceType == Constant.Expense)
+                .Sum(f => f.Amount);
+
+            var recentTransactions = monthlyFinance
+                .OrderByDescending(f => f.TransactionDate)
+                .Take(5)
+                .Select(f => new RecentTransactionDto
+                {
+                    Id= f.Id,
+                    TransactionDate = f.TransactionDate,
+                    Amount = f.Amount,
+                    FinanceType = f.FinanceType,
+                    Category = f.Category,
+                    Description = f.Description
+                })
+                .ToList();
+             
+            var monthlyDashboard = new MonthlyDashboardDto
+            {
+                Year = year,
+                Month = month,
+                TotalIncome = totalIncome,
+                TotalExpense = totalExpense,
+                RecentTransactions = recentTransactions,
+                TransactionCount = monthlyFinance.Count()
+            };
+            return monthlyDashboard;
+        }
+
+        public async Task<YearlyDashboardDto> GetYearlyDashboardAsync(int year)
+        {
+            var yearFinance=await _financeTrackerRepository.GetByYearAsync(year);
+            var totalIncome = yearFinance
+    .Where(f => f.FinanceType ==Constant.Income)
+    .Sum(f => f.Amount);
+
+            var totalExpense = yearFinance
+                .Where(f => f.FinanceType == Constant.Expense)
+                .Sum(f => f.Amount);
+            var monthlySummaries = yearFinance
+    .GroupBy(f => f.TransactionDate.Month)
+    .Select(g => new MonthlySummaryDto
+    {
+        Year = year,
+        Month = g.Key,
+        Income = g.Where(f => f.FinanceType == Constant.Income)
+                  .Sum(f => f.Amount),
+
+        Expense = g.Where(f => f.FinanceType == Constant.Expense)
+                   .Sum(f => f.Amount),
+    })
+    .ToList();
+            var yearlyDashboard = new YearlyDashboardDto
+            {
+                Year = year,
+                TotalIncome = totalIncome,
+                TotalExpense = totalExpense,
+                MonthlySummaries = monthlySummaries
+            };  
+            return yearlyDashboard;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using WebAPIBeginnerHerryWijaya.Data;
+using WebAPIBeginnerHerryWijaya.Models.Project1FinanceTracker;
 using WebAPIBeginnerHerryWijaya.Repositories;
 using WebAPIBeginnerHerryWijaya.Services;
 
@@ -21,6 +22,21 @@ namespace WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker
             _financeTrackerService = financeTrackerService;
             _financeTrackerRepository = financeTrackerRepository;
         }
+        [HttpGet("dashboard/monthly")]
+        public async Task<ActionResult<MonthlyDashboardDto>> GetMonthlyDashboard(
+    int year,
+    int month)
+        {
+            var dashboard = await _financeTrackerService.GetMonthlyDashboardAsync(year, month);
+            return Ok(dashboard);
+        }
+        [HttpGet("dashboard/yearly")]
+        public async Task<ActionResult<YearlyDashboardDto>> GetYearlyDashboard(
+    int year)
+        {
+            var dashboard = await _financeTrackerService.GetYearlyDashboardAsync(year   );
+            return Ok(dashboard);
+        }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFinance(int id)
         {
@@ -33,9 +49,10 @@ namespace WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker
             return NoContent();
         }
         [HttpGet]
-        public async Task<IActionResult> GetAllFinances()
+        public async Task<IActionResult> GetAllFinances(int page = 1,
+    int pageSize = 20)
         {
-            var finances = await _financeTrackerRepository.GetAllAsync();
+            var finances = await _financeTrackerRepository.GetAllAsync(page, pageSize);
             return Ok(finances);
         }
         [HttpPost("generateRandom")]

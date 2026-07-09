@@ -6,7 +6,8 @@ namespace WebAPIBeginnerHerryWijaya.Utilities
 {
     public static  class Constant
     {
-
+        public const string Income = "Income";
+        public const string Expense = "Expense";
         public static readonly string[] FinanceTypes = new string[]
         {
             "Income",

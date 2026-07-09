@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\controllers\\project1financetracker\\project1financetrackercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\repositories\\financetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\repositories\\financetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\repositories\\ifinancetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\repositories\\ifinancetrackerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\services\\financetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\services\\financetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\services\\ifinancetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\services\\ifinancetrackerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\models\\project1financetracker\\monthlydashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\models\\project1financetracker\\monthlydashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|c:\\csharp\\herrywijaya2026\\reactbeginner\\webapibeginnerherrywijaya\\webapibeginnerherrywijaya\\models\\project1financetracker\\recenttransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F11B5A-7396-4CB3-BBB3-B6AB3945A46A}|WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya.csproj|solutionrelative:webapibeginnerherrywijaya\\models\\project1financetracker\\recenttransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,65 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FinanceTrackerService.cs",
-              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
-              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
-              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
-              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:50:14.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IFinanceTrackerService.cs",
-              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
-              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
-              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
-              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Services\\IFinanceTrackerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:50:05.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FinanceTrackerRepository.cs",
-              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
-              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
-              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
-              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Repositories\\FinanceTrackerRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwB0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:36:29.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IFinanceTrackerRepository.cs",
-              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
-              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
-              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
-              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Repositories\\IFinanceTrackerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:36:19.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Project1FinanceTrackerController.cs",
               "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
               "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
               "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
               "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Controllers\\Project1FinanceTracker\\Project1FinanceTrackerController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwB0AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCQAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T10:41:44.481Z",
+              "WhenOpened": "2026-07-09T06:06:53.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecentTransactionDto.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\RecentTransactionDto.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\RecentTransactionDto.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\RecentTransactionDto.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\RecentTransactionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T05:58:53.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MonthlyDashboardDto.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\MonthlyDashboardDto.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\MonthlyDashboardDto.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\MonthlyDashboardDto.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Models\\Project1FinanceTracker\\MonthlyDashboardDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T05:58:52.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FinanceTrackerService.cs",
+              "DocumentMoniker": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "RelativeDocumentMoniker": "WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "ToolTip": "C:\\Csharp\\herrywijaya2026\\reactbeginner\\WebAPIBeginnerHerryWijaya\\WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "RelativeToolTip": "WebAPIBeginnerHerryWijaya\\Services\\FinanceTrackerService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAQwE8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T04:49:48.442Z",
               "EditorCaption": ""
             }
           ]

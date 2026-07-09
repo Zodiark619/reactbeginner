@@ -16,16 +16,16 @@ import DataTable from "./DataTable";
 const columnHelper = createColumnHelper();
 
 function FinanceTrackerAPI() {
+  const [page, setPage] = useState(0); // MUI uses 0-based pages
+  const [rowsPerPage, setRowsPerPage] = useState(20);
   const [count, setCount] = useState(2);
   const [generatedFinances, setGeneratedFinances] = useState([]);
-  const {
-    data: finances = [],
-    isLoading,
-    error,
-  } = useQuery({
-    queryKey: ["finances"],
-    queryFn: getFinances, // GET /api/finance
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["finances", page, rowsPerPage],
+    queryFn: () => getFinances(page + 1, rowsPerPage), // GET /api/finance
   });
+  const finances = data?.items ?? [];
+  const totalCount = data?.totalCount ?? 0;
   const queryClient = useQueryClient();
 
   const generateMutation = useMutation({
@@ -102,7 +102,15 @@ function FinanceTrackerAPI() {
       />
       <button onClick={() => generateMutation.mutate(count)}>Generate</button>
       <h2>All Finances</h2>
-      <DataTable data={finances} columns={columns} />
+      <DataTable
+        data={finances}
+        columns={columns}
+        totalCount={totalCount}
+        page={page}
+        rowsPerPage={rowsPerPage}
+        onPageChange={setPage}
+        onRowsPerPageChange={setRowsPerPage}
+      />
     </>
   );
 }

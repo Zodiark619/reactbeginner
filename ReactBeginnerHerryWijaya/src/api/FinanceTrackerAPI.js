@@ -7,9 +7,9 @@ export const generateRandom = async (count) => {
 
   return response.data;
 };
-export const getFinances = async () => {
+export const getFinances = async (page, pageSize) => {
   const response = await axios.get(
-    `https://localhost:5000/api/Project1FinanceTracker/`,
+    `https://localhost:5000/api/Project1FinanceTracker?page=${page}&pageSize=${pageSize}`,
   );
 
   return response.data;
