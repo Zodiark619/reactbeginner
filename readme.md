@@ -17,3 +17,9 @@
 
 - Yearly and monthly dashboard react component
   ![Yearly and monthly dashboard](Project1FinanceTracker_YearlyMonthlyDashboardComponent.png)
+
+- Yearly bar chart dashboard react component
+  ![Yearly bar chart](Project1FinanceTracker_YearlyDashboardBarChartComponent.png)
+
+- Monthly pie chart dashboard react component
+  ![Monthly pie chart](Project1FinanceTracker_MonthlyDashboardPieChartComponent.png)

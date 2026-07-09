@@ -21,6 +21,8 @@ import { Button, MenuItem, Select } from "@mui/material";
 import YearlyDashboardDataTable from "./components/YearlyDashboardDataTable";
 import { MONTHS } from "./constants";
 import MonthlyDashboardDataTable from "./components/MonthlyDashboardDataTable";
+import BarChartComponent from "./components/BarChartComponent";
+import PieChartComponent from "./components/PieChartComponent";
 const columnHelper = createColumnHelper();
 
 function FinanceTrackerAPI() {
@@ -114,16 +116,27 @@ function FinanceTrackerAPI() {
   if (error) return <p>Something went wrong.</p>;
 
   return (
-    <>
+    <div>
       {generatedFinances && (
         <div>
           <h2>Generated Random Finances</h2>
           <DataTable data={generatedFinances} columns={columns} />
         </div>
       )}
-      {yearlyDashboard && <YearlyDashboardDataTable data={yearlyDashboard} />}
+      {yearlyDashboard && (
+        <div>
+          <YearlyDashboardDataTable data={yearlyDashboard} />
+          <br></br>
+          <BarChartComponent yearlyDashboard={yearlyDashboard} />
+        </div>
+      )}
+
       {monthlyDashboard && (
-        <MonthlyDashboardDataTable data={monthlyDashboard} />
+        <div>
+          <MonthlyDashboardDataTable data={monthlyDashboard} />
+          <br></br>
+          <PieChartComponent data={monthlyDashboard} />
+        </div>
       )}
 
       <br></br>
@@ -172,7 +185,7 @@ function FinanceTrackerAPI() {
         onPageChange={setPage}
         onRowsPerPageChange={setRowsPerPage}
       />
-    </>
+    </div>
   );
 }
 

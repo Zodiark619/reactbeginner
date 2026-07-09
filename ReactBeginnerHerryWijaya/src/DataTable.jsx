@@ -28,7 +28,8 @@ function DataTable({
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
-
+  const showPagination =
+    page !== undefined && rowsPerPage !== undefined && totalCount !== undefined;
   return (
     <>
       <TableContainer component={Paper}>
@@ -59,17 +60,19 @@ function DataTable({
               </TableRow>
             ))}
           </TableBody>
-          <TablePagination
-            component="div"
-            count={totalCount}
-            page={page}
-            rowsPerPage={rowsPerPage}
-            onPageChange={(e, newPage) => onPageChange(newPage)}
-            onRowsPerPageChange={(e) => {
-              onRowsPerPageChange(parseInt(e.target.value, 10));
-              onPageChange(0);
-            }}
-          />
+          {showPagination && (
+            <TablePagination
+              component="div"
+              count={totalCount}
+              page={page}
+              rowsPerPage={rowsPerPage}
+              onPageChange={(e, newPage) => onPageChange(newPage)}
+              onRowsPerPageChange={(e) => {
+                onRowsPerPageChange(parseInt(e.target.value, 10));
+                onPageChange(0);
+              }}
+            />
+          )}
         </Table>
       </TableContainer>
     </>
