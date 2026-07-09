@@ -22,3 +22,17 @@ export const deleteFinance = async (id) => {
 
   return response.data;
 };
+export const getMonthlyDashboardFinance = async (year, month) => {
+  const response = await axios.get(
+    `https://localhost:5000/api/Project1FinanceTracker/dashboard/monthly?year=${year}&month=${month}`,
+  );
+
+  return response.data;
+};
+export const getYearlyDashboardFinance = async (year) => {
+  const response = await axios.get(
+    `https://localhost:5000/api/Project1FinanceTracker/dashboard/yearly?year=${year}`,
+  );
+
+  return response.data;
+};

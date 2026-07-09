@@ -11,3 +11,9 @@
 
 - Generate yearly dashboard using int year as query
   ![Generate yearly dashboard](Project1FinanceTracker_YearlyDashboard.png)
+
+- Get all finance with pagination react component
+  ![Get all finance with pagination](Project1FinanceTracker_GetAllFinancePaginationComponent.png)
+
+- Yearly and monthly dashboard react component
+  ![Yearly and monthly dashboard](Project1FinanceTracker_YearlyMonthlyDashboardComponent.png)

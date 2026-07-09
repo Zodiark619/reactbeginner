@@ -59,6 +59,17 @@ function DataTable({
               </TableRow>
             ))}
           </TableBody>
+          <TablePagination
+            component="div"
+            count={totalCount}
+            page={page}
+            rowsPerPage={rowsPerPage}
+            onPageChange={(e, newPage) => onPageChange(newPage)}
+            onRowsPerPageChange={(e) => {
+              onRowsPerPageChange(parseInt(e.target.value, 10));
+              onPageChange(0);
+            }}
+          />
         </Table>
       </TableContainer>
     </>
