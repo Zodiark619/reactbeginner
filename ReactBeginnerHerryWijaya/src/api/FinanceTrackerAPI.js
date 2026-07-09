@@ -14,6 +14,7 @@ export const getFinances = async (page, pageSize) => {
 
   return response.data;
 };
+
 export const deleteFinance = async (id) => {
   const response = await axios.delete(
     `https://localhost:5000/api/Project1FinanceTracker/${id}`,
