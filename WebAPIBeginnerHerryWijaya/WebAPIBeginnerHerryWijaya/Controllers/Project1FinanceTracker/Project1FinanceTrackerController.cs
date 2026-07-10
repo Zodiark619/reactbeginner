@@ -55,6 +55,12 @@ namespace WebAPIBeginnerHerryWijaya.Controllers.Project1FinanceTracker
             var finances = await _financeTrackerRepository.GetAllAsync(page, pageSize);
             return Ok(finances);
         }
+        [HttpGet("financeQuery")]
+        public async Task<IActionResult> FinanceQueryAsync([FromQuery]FinanceQuery query)
+        {
+            var finances = await _financeTrackerRepository.FinanceQueryAsync(query);
+            return Ok(finances);
+        }
         [HttpPost("generateRandom")]
         public async Task<IActionResult> GenerateRandomFinances([FromQuery]int count)
         {

@@ -12,6 +12,9 @@
 - Generate yearly dashboard using int year as query
   ![Generate yearly dashboard](Project1FinanceTracker_YearlyDashboard.png)
 
+- Generate sorting and searching functionality for datatable filtering
+  ![Generate sorting and searching](Project1FinanceTracker2_SearchSortFunctionality.png)
+
 - Get all finance with pagination react component
   ![Get all finance with pagination](Project1FinanceTracker_GetAllFinancePaginationComponent.png)
 

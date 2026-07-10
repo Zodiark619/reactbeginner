@@ -12,5 +12,7 @@ namespace WebAPIBeginnerHerryWijaya.Repositories
         Task<List<Finance>> GetByYearAsync(int year);
 
         Task<List<Finance>> GetByMonthAsync(int year, int month);
+        Task<PagedResult<Finance>> FinanceQueryAsync(FinanceQuery query);
+
     }
 }

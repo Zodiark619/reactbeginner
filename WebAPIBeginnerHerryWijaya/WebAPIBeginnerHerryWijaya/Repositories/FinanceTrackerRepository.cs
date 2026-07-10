@@ -31,6 +31,58 @@ namespace WebAPIBeginnerHerryWijaya.Repositories
             return true;
         }
 
+        public async Task<PagedResult<Finance>> FinanceQueryAsync(FinanceQuery query)
+        {
+            var baseQuery = _applicationDb.Finances.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(query.Search))
+            {
+                baseQuery = baseQuery.Where(f =>
+                    f.Description.Contains(query.Search));
+            }
+            if (!string.IsNullOrWhiteSpace(query.FinanceType  ))
+            {
+                baseQuery = baseQuery.Where(f => f.FinanceType == query.FinanceType);
+            }
+            if (!string.IsNullOrWhiteSpace(query.Category))
+            {
+                baseQuery = baseQuery.Where(f => f.Category == query.Category);
+            }
+            baseQuery = query.SortBy?.ToLower() switch
+            {
+                "amount" => query.SortOrder == "desc"
+                    ? baseQuery.OrderByDescending(x => x.Amount)
+                    : baseQuery.OrderBy(x => x.Amount),
+
+                "date" => query.SortOrder == "desc"
+                    ? baseQuery.OrderByDescending(x => x.TransactionDate)
+                    : baseQuery.OrderBy(x => x.TransactionDate),
+
+                "category" => query.SortOrder == "desc"
+                    ? baseQuery.OrderByDescending(x => x.Category)
+                    : baseQuery.OrderBy(x => x.Category),
+
+                "description" => query.SortOrder == "desc"
+                    ? baseQuery.OrderByDescending(x => x.Description)
+                    : baseQuery.OrderBy(x => x.Description),
+
+                _ => baseQuery.OrderBy(x => x.Id)
+            };
+            var totalCount = await baseQuery.CountAsync();
+
+            var items = await baseQuery
+                
+                .Skip((query.Page - 1) * query.PageSize)
+                .Take(query.PageSize)
+                .ToListAsync();
+
+            return new PagedResult<Finance>
+            {
+                Items = items,
+                TotalCount = totalCount
+            };
+        }
+
         public async Task<PagedResult<Finance>> GetAllAsync(int page, int pageSize)
         {
             var query = _applicationDb.Finances.AsQueryable();

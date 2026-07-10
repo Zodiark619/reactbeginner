@@ -3,6 +3,7 @@ import Home from "./Home";
 import Navbar from "./Navbar";
 import WeatherForecastAPI from "./WeatherForecastAPI";
 import FinanceTrackerAPI from "./FinanceTrackerAPI";
+import FinanceTrackerAPI2 from "./FinanceTrackerAPI2";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/weatherForecastAPI" element={<WeatherForecastAPI />} />
         <Route path="/financeTrackerAPI" element={<FinanceTrackerAPI />} />
+        <Route path="/financeTrackerAPI2" element={<FinanceTrackerAPI2 />} />
       </Routes>
     </div>
   );

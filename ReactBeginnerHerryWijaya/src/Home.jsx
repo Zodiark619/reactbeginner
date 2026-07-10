@@ -3,8 +3,17 @@ function Home() {
   return (
     <div>
       <h2>
-        <Link to="/weatherForecastAPI">Weather Forecast API</Link>
-        <Link to="/financeTrackerAPI">Finance Tracker API</Link>
+        <div>
+          <p>
+            <Link to="/weatherForecastAPI">Weather Forecast API</Link>
+          </p>
+          <p>
+            <Link to="/financeTrackerAPI">Finance Tracker API</Link>
+          </p>
+          <p>
+            <Link to="/financeTrackerAPI2">Finance Tracker API 2</Link>
+          </p>
+        </div>
       </h2>
     </div>
   );
