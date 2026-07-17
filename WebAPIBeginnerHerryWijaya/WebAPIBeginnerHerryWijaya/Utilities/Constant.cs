@@ -6,6 +6,8 @@ namespace WebAPIBeginnerHerryWijaya.Utilities
 {
     public static  class Constant
     {
+        public const string Role_Admin = "Admin";
+        public const string Role_Customer = "Customer";
         public const string Income = "Income";
         public const string Expense = "Expense";
         public static readonly string[] FinanceTypes = new string[]

@@ -14,7 +14,14 @@ export const getFinances = async (page, pageSize) => {
 
   return response.data;
 };
+export const getFinancesQueryAsync = async (financeQuery) => {
+  const response = await axios.get(
+    `https://localhost:5000/api/Project1FinanceTracker/financeQuery`,
+    { params: financeQuery },
+  );
 
+  return response.data;
+};
 export const deleteFinance = async (id) => {
   const response = await axios.delete(
     `https://localhost:5000/api/Project1FinanceTracker/${id}`,
@@ -34,5 +41,20 @@ export const getYearlyDashboardFinance = async (year) => {
     `https://localhost:5000/api/Project1FinanceTracker/dashboard/yearly?year=${year}`,
   );
 
+  return response.data;
+};
+
+export const login = async (loginRequestDto) => {
+  const response = await axios.post(
+    `https://localhost:5000/api/Auth/login`,
+    loginRequestDto,
+  );
+  return response.data;
+};
+export const register = async (registerRequestDto) => {
+  const response = await axios.post(
+    `https://localhost:5000/api/Auth/register`,
+    registerRequestDto,
+  );
   return response.data;
 };

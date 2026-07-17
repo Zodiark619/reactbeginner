@@ -13,6 +13,9 @@ function Home() {
           <p>
             <Link to="/financeTrackerAPI2">Finance Tracker API 2</Link>
           </p>
+          <p>
+            <Link to="/bradtraversy">Brad Traversy</Link>
+          </p>
         </div>
       </h2>
     </div>
