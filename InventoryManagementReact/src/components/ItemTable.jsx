@@ -7,7 +7,7 @@ import {
 
 const columnHelper = createColumnHelper();
 
-export default function ItemTable({ data }) {
+export default function ItemTable({ data, handleEdit, handleDelete }) {
   const columns = [
     columnHelper.accessor("name", {
       header: "Name",
@@ -17,6 +17,28 @@ export default function ItemTable({ data }) {
     }),
     columnHelper.accessor("quantity", {
       header: "Quantity",
+    }),
+
+    columnHelper.display({
+      id: "actions",
+      header: "Actions",
+      cell: ({ row }) => (
+        <div className="flex gap-2">
+          <button
+            className="btn btn-sm btn-warning"
+            onClick={() => handleEdit(row.original)}
+          >
+            Edit
+          </button>
+
+          <button
+            className="btn btn-sm btn-error"
+            onClick={() => handleDelete(row.original)}
+          >
+            Delete
+          </button>
+        </div>
+      ),
     }),
   ];
 
