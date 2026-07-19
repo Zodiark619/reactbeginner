@@ -1,3 +1,14 @@
+## Project 2 Inventory Management
+
+- Item CRUD using Tanstack Form and Mutation
+  ![Item CRUD](Project2InventoryManagement_TanstackForm.png)
+
+- Tanstack Query and Mutation for Item CRUD
+  ![Tanstack Query and Mutation](Project2InventoryManagement_TanstackQueryWithPagination.png)
+
+- Item Get All using pagination
+  ![Item Get All](Project2InventoryManagement_TanstackTable.png)
+
 ## Project 1 Finance Tracker
 
 - Generate random finance using int count as query

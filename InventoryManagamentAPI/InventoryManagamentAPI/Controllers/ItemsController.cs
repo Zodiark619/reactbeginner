@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using InventoryManagamentAPI.Data;
 using InventoryManagamentAPI.Models;
+using InventoryManagamentAPI.Models.DTO;
 
 namespace InventoryManagamentAPI.Controllers
 {
@@ -27,6 +28,15 @@ namespace InventoryManagamentAPI.Controllers
         //{
         //    return await _context.Items.ToListAsync();
         //}
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllItems()
+        {
+            var items = await _context.Items
+                .OrderBy(i => i.Name)
+                .ToListAsync();
+
+            return Ok(items);
+        }
         [HttpGet]
         public async Task<IActionResult> GetItems(
     int page = 1,
@@ -63,30 +73,21 @@ namespace InventoryManagamentAPI.Controllers
         // PUT: api/Items/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutItem(int id, Item item)
+        public async Task<IActionResult> PutItem(int id, ItemUpdateDTO itemDto)
         {
-            if (id != item.Id)
+            var item = await _context.Items.FindAsync(id);
+            if (item == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(item).State = EntityState.Modified;
 
-            try
-            {
+            item.Name = itemDto.Name;
+                item.Price = itemDto.Price;
+            
+            
                 await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ItemExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            
 
             return NoContent();
         }
@@ -94,13 +95,19 @@ namespace InventoryManagamentAPI.Controllers
         // POST: api/Items
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Item>> PostItem(Item item)
+        public async Task<ActionResult<Item>> PostItem(ItemCreateDTO itemDto)
         {
+            var item= new Item()
+            {
+                Name = itemDto.Name,
+                Price = itemDto.Price,
+            };
             _context.Items.Add(item);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetItem", new { id = item.Id }, item);
         }
+      
 
         // DELETE: api/Items/5
         [HttpDelete("{id}")]

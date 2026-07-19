@@ -7,6 +7,8 @@ namespace InventoryManagamentAPI.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Item> Items { get; set; }
+        public DbSet<InventoryProcessDetail> InventoryProcessDetails { get; set; }
+        public DbSet<InventoryProcess> InventoryProcesses { get; set; }
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }

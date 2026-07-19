@@ -1,5 +1,13 @@
 // api/items.js
+export async function getItemsWithoutPaginationAPI() {
+  const response = await fetch(`https://localhost:5001/api/items/all`);
 
+  if (!response.ok) {
+    throw new Error("Failed to fetch items");
+  }
+
+  return response.json();
+}
 export async function getItemsAPI(page, pageSize) {
   const response = await fetch(
     `https://localhost:5001/api/items?page=${page}&pageSize=${pageSize}`,

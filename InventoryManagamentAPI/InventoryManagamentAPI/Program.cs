@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using InventoryManagamentAPI.Controllers;
+using InventoryManagamentAPI.Services.IServices;
+using InventoryManagamentAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,6 +66,7 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
+builder.Services.AddScoped<IInventoryProcessService, InventoryProcessService>();
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {

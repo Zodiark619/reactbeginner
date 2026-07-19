@@ -11,7 +11,7 @@ function ItemModal({
     defaultValues: {
       name: editingItem?.name ?? "",
       price: editingItem?.price ?? 0,
-      quantity: editingItem?.quantity ?? 0,
+      //    quantity: editingItem?.quantity ?? 0,
     },
 
     onSubmit: async ({ value }) => {
@@ -71,7 +71,7 @@ function ItemModal({
             )}
           </form.Field>
 
-          <form.Field name="quantity">
+          {/* <form.Field name="quantity">
             {(field) => (
               <div className="mb-4">
                 <label className="block mb-1">Quantity</label>
@@ -83,7 +83,7 @@ function ItemModal({
                 />
               </div>
             )}
-          </form.Field>
+          </form.Field> */}
           <div className="modal-action">
             <button type="button" className="btn" onClick={onClose}>
               Cancel
