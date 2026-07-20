@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import DummyGenerateReport from "../components/InventoryProcess/DummyGenerateReport";
 
-export const Route = createFileRoute("/InventoryProcess")({
+export const Route = createFileRoute("/inventoryProcess")({
   component: InventoryProcess,
 });
 
 function InventoryProcess() {
-  return <div className="p-2">Hello from About!</div>;
+  return (
+    <>
+      <DummyGenerateReport />
+    </>
+  );
 }

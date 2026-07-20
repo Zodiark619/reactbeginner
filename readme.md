@@ -9,6 +9,12 @@
 - Item Get All using pagination
   ![Item Get All](Project2InventoryManagement_TanstackTable.png)
 
+- Generate Dummy Inventory Process in React using TanQuery
+  ![Inventory Process](Project2InventoryManagement_GenerateDummyInventoryProcess.png)
+
+- Generate Dummy Inventory Process API using .NET and Postman
+  ![Inventory Process API](Project2InventoryManagement_GenerateDummyInventoryProcessAPI.png)
+
 ## Project 1 Finance Tracker
 
 - Generate random finance using int count as query

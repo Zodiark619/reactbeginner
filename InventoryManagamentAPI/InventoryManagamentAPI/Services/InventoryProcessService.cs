@@ -37,7 +37,9 @@ namespace InventoryManagamentAPI.Services
                  
                 detail.TotalPrice = detail.ProcessedQuantity * item.Price;
 
+
                 inventoryProcess.InventoryProcessDetails.Add(detail);
+               
                 temporaryQuantity = item.Quantity+( detail.ProcessedQuantity*(detail.ProcessType == "Stock In" ?1: -1));
             }
 
@@ -46,16 +48,41 @@ namespace InventoryManagamentAPI.Services
             inventoryProcess.TotalStockOutPrice =
                 inventoryProcess.InventoryProcessDetails.Where(x=>x.ProcessType=="Stock Out").Sum(x => x.TotalPrice);
 
-            await _dbContext.InventoryProcesses.AddAsync(inventoryProcess);
             item.Quantity = temporaryQuantity;
+            inventoryProcess.FinalQuantity = temporaryQuantity;
+            await _dbContext.InventoryProcesses.AddAsync(inventoryProcess);
+
             await _dbContext.SaveChangesAsync();
 
             return new InventoryProcessGenerateDummyReportDTO
             {
-                InventoryProcess = inventoryProcess,
-                InventoryProcessDetails = inventoryProcess.InventoryProcessDetails,
+                InventoryProcess = new InventoryProcessDTO
+                {
+                 Id=   inventoryProcess.Id,
+                 Name=inventoryProcess.Name,
+                 Created=inventoryProcess.Created,
+                 FinalQuantity = inventoryProcess.FinalQuantity,
+                 TotalStockInPrice = inventoryProcess.TotalStockInPrice,
+                 TotalStockOutPrice=inventoryProcess.TotalStockOutPrice,
+                 InventoryProcessDetails =  inventoryProcess.InventoryProcessDetails.Select(x=>new InventoryProcessDetailDTO
+                 {
+                     Id=x.Id,
+                     Name=x.Name,
+                     ProcessType=x.ProcessType,
+                     ItemName=x.Item.Name,
+                     ItemPrice = x.Item.Price,
+                     ProcessedQuantity=x.ProcessedQuantity,
+                     TotalPrice=x.TotalPrice,
+                 }).ToList(),
+                } 
                 
             };
+            //return new InventoryProcessGenerateDummyReportDTO
+            //{
+            //    InventoryProcess = inventoryProcess,
+            //    InventoryProcessDetails = inventoryProcess.InventoryProcessDetails,
+                
+            //};
         }
         //public async Task<InventoryProcessGenerateDummyReportDTO> GenerateDummyInventoryProcess(Item item)
         //{

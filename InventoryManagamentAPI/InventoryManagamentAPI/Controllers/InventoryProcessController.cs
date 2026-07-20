@@ -18,7 +18,7 @@ namespace InventoryManagamentAPI.Controllers
             _inventoryProcessService = inventoryProcessService;
         }
 
-        [HttpPost("generate-dummy/${itemId}")]
+        [HttpPost("generate-dummy/{itemId}")]
         public async Task<ActionResult<InventoryProcessGenerateDummyReportDTO>> GenerateDummy(int itemId)
         {
             

@@ -28,36 +28,47 @@ function DummyGenerateReport() {
   };
   return (
     <>
-      {showResult && (
-        <>
-          <select
-            value={selectedItemId}
-            onChange={(e) => setSelectedItemId(Number(e.target.value))}
-          >
-            <option value={0}>Select an item</option>
+      <div>
+        <select
+          value={selectedItemId}
+          onChange={(e) => setSelectedItemId(Number(e.target.value))}
+        >
+          <option value={0}>Select an item</option>
 
-            {data?.map((item) => (
-              <option key={item.id} value={item.id}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          <button onClick={handleGenerate} disabled={selectedItemId === 0}>
-            Generate Dummy
-          </button>
-          <h1>{data.inventoryProcess.name}</h1>
+          {items?.map((item) => (
+            <option key={item.id} value={item.id}>
+              {item.name}
+            </option>
+          ))}
+        </select>
+        <br></br>
+        <button
+          onClick={handleGenerate}
+          disabled={selectedItemId === 0}
+          className="mt-2 mb-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Generate Dummy
+        </button>
+      </div>
+      {report && (
+        <>
+          <h1>{report.inventoryProcess.name} </h1>
 
           <p>
-            Created: {new Date(data.inventoryProcess.created).toLocaleString()}
+            Created:{" "}
+            {new Date(report.inventoryProcess.created).toLocaleString()}
           </p>
 
-          <p>Total: ${data.inventoryProcess.totalProcessedPrice}</p>
-
+          <p>Total Stock In: ${report.inventoryProcess.totalStockInPrice}</p>
+          <p>Total Stock Out: ${report.inventoryProcess.totalStockOutPrice}</p>
+          <p>Final Quantity: {report.inventoryProcess.finalQuantity}</p>
+          <hr></hr>
           <ul>
-            {data.inventoryProcessDetails.map((detail) => (
+            {report.inventoryProcess.inventoryProcessDetails.map((detail) => (
               <li key={detail.id}>
-                {detail.name} - Qty: {detail.processedQuantity} - Total: $
-                {detail.totalPrice}
+                {detail.name} ({detail.itemName} {detail.processType}) - Qty:{" "}
+                {detail.processedQuantity} Price: ${detail.itemPrice} (Total: $
+                {detail.totalPrice})
               </li>
             ))}
           </ul>

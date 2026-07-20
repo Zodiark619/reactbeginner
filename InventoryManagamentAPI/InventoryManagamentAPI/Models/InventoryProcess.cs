@@ -9,7 +9,7 @@
         public List<InventoryProcessDetail> InventoryProcessDetails { get; set; } = new();
 
 
-
+        public int FinalQuantity {  get; set; }
         public decimal TotalStockInPrice {  get; set; }
         public decimal TotalStockOutPrice {  get; set; }
     }

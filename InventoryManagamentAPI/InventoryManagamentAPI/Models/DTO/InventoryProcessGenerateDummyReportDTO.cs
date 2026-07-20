@@ -3,7 +3,6 @@
     public class InventoryProcessGenerateDummyReportDTO
     {
 
-        public InventoryProcess InventoryProcess { get; set; } = new();
-        public List<InventoryProcessDetail> InventoryProcessDetails { get; set; } = new();
+        public InventoryProcessDTO InventoryProcess { get; set; } = null!;
     }
 }
