@@ -16,6 +16,12 @@ const RootLayout = () => (
             <li>
               <Link to="/InventoryProcess">Inventory Process</Link>
             </li>
+            <li>
+              <Link to="/ProductEcommerce">Product Ecommerce</Link>
+            </li>
+            <li>
+              <Link to="/Cart">Cart</Link>
+            </li>
           </ul>
         </div>
       </nav>

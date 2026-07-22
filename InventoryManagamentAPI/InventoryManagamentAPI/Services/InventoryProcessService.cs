@@ -40,7 +40,7 @@ namespace InventoryManagamentAPI.Services
 
                 inventoryProcess.InventoryProcessDetails.Add(detail);
                
-                temporaryQuantity = item.Quantity+( detail.ProcessedQuantity*(detail.ProcessType == "Stock In" ?1: -1));
+                temporaryQuantity = temporaryQuantity + ( detail.ProcessedQuantity*(detail.ProcessType == "Stock In" ?1: -1));
             }
 
             inventoryProcess.TotalStockInPrice =

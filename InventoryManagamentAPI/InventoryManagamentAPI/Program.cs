@@ -1,17 +1,19 @@
+using InventoryManagamentAPI.Controllers;
 using InventoryManagamentAPI.Data;
+using InventoryManagamentAPI.Services;
+using InventoryManagamentAPI.Services.IServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Stripe;
 using System.Text;
-using InventoryManagamentAPI.Controllers;
-using InventoryManagamentAPI.Services.IServices;
-using InventoryManagamentAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+StripeConfiguration.ApiKey =
+    builder.Configuration["Stripe:SecretKey"];
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -72,7 +74,7 @@ using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-    string[] roles = { "Admin", "Employee" };
+    string[] roles = { "Admin", "Customer" };
 
     foreach (var role in roles)
     {

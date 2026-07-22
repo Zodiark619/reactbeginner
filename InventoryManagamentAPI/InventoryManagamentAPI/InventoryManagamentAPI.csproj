@@ -1,10 +1,37 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>21b1a278-2f22-4fb8-8e1c-1561b48c1cd3</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Stripe\ViewModels\**" />
+    <Content Remove="Models\Stripe\ViewModels\**" />
+    <EmbeddedResource Remove="Models\Stripe\ViewModels\**" />
+    <None Remove="Models\Stripe\ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Stripe\CardInventoriesController.cs" />
+    <Compile Remove="Controllers\Stripe\CheckoutController.cs" />
+    <Compile Remove="Controllers\Stripe\CheckoutResultController.cs" />
+    <Compile Remove="Controllers\Stripe\HistoryController.cs" />
+    <Compile Remove="Controllers\Stripe\HomeController.cs" />
+    <Compile Remove="Controllers\Stripe\StripeWebhookController.cs" />
+    <Compile Remove="Models\Stripe\BuyRequest.cs" />
+    <Compile Remove="Models\Stripe\CardInventory.cs" />
+    <Compile Remove="Models\Stripe\Order.cs" />
+    <Compile Remove="Models\Stripe\UserInventory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Models\Stripe\ViewModels\AddToCartRequest.cs" />
+    <Compile Include="Models\Stripe\ViewModels\CartDTO.cs" />
+    <Compile Include="Models\Stripe\ViewModels\UpdateCartResponseDTO.cs" />
+  </ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.17" />

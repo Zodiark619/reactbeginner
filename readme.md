@@ -1,5 +1,13 @@
 ## Project 2 Inventory Management
 
+- Product Page Get All
+  ![Product Page](Project2InventoryManagement_ProductPage.png)
+- Cart Page Get All
+  ![Cart Page](Project2InventoryManagement_CartPage.png)
+
+- Cart API Get by userId
+  ![Cart API](Project2InventoryManagement_GetCartAPI.png)
+
 - Item CRUD using Tanstack Form and Mutation
   ![Item CRUD](Project2InventoryManagement_TanstackForm.png)
 

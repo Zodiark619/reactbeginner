@@ -9,12 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ProductEcommerceRouteImport } from './routes/productEcommerce'
 import { Route as InventoryProcessRouteImport } from './routes/inventoryProcess'
+import { Route as CartRouteImport } from './routes/cart'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ProductEcommerceRoute = ProductEcommerceRouteImport.update({
+  id: '/productEcommerce',
+  path: '/productEcommerce',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InventoryProcessRoute = InventoryProcessRouteImport.update({
   id: '/inventoryProcess',
   path: '/inventoryProcess',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CartRoute = CartRouteImport.update({
+  id: '/cart',
+  path: '/cart',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +37,59 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cart': typeof CartRoute
   '/inventoryProcess': typeof InventoryProcessRoute
+  '/productEcommerce': typeof ProductEcommerceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cart': typeof CartRoute
   '/inventoryProcess': typeof InventoryProcessRoute
+  '/productEcommerce': typeof ProductEcommerceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cart': typeof CartRoute
   '/inventoryProcess': typeof InventoryProcessRoute
+  '/productEcommerce': typeof ProductEcommerceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/inventoryProcess'
+  fullPaths: '/' | '/cart' | '/inventoryProcess' | '/productEcommerce'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/inventoryProcess'
-  id: '__root__' | '/' | '/inventoryProcess'
+  to: '/' | '/cart' | '/inventoryProcess' | '/productEcommerce'
+  id: '__root__' | '/' | '/cart' | '/inventoryProcess' | '/productEcommerce'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CartRoute: typeof CartRoute
   InventoryProcessRoute: typeof InventoryProcessRoute
+  ProductEcommerceRoute: typeof ProductEcommerceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/productEcommerce': {
+      id: '/productEcommerce'
+      path: '/productEcommerce'
+      fullPath: '/productEcommerce'
+      preLoaderRoute: typeof ProductEcommerceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/inventoryProcess': {
       id: '/inventoryProcess'
       path: '/inventoryProcess'
       fullPath: '/inventoryProcess'
       preLoaderRoute: typeof InventoryProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cart': {
+      id: '/cart'
+      path: '/cart'
+      fullPath: '/cart'
+      preLoaderRoute: typeof CartRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,7 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CartRoute: CartRoute,
   InventoryProcessRoute: InventoryProcessRoute,
+  ProductEcommerceRoute: ProductEcommerceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
