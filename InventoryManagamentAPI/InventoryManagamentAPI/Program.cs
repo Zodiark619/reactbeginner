@@ -2,6 +2,7 @@ using InventoryManagamentAPI.Controllers;
 using InventoryManagamentAPI.Data;
 using InventoryManagamentAPI.Services;
 using InventoryManagamentAPI.Services.IServices;
+using InventoryManagamentAPI.Services.Stripe;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -69,6 +70,7 @@ builder.Services.AddCors(options =>
     });
 });
 builder.Services.AddScoped<IInventoryProcessService, InventoryProcessService>();
+builder.Services.AddScoped<IRewardService,RewardService>();
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {

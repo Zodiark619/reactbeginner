@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { GetUserCart, UpdateCart } from "../../api/stripe/cart";
 import { useEffect, useState } from "react";
+import { Checkout } from "../../api/stripe/checkout";
 
 export default function CartPage() {
   const queryClient = useQueryClient();
@@ -48,14 +49,21 @@ export default function CartPage() {
       });
     },
   });
-  const handleUpdateCart = (cartItems) => {
+  const checkoutMutation = useMutation({
+    mutationFn: Checkout,
+
+    onSuccess: (data) => {
+      window.location.href = data.url;
+    },
+  });
+  const handleUpdateCart = async (cartItems) => {
     const cartDto = {
       items: cartItems.map((item) => ({
         productId: item.productId,
         quantity: item.quantity,
       })),
     };
-    updateCartMutation.mutate(cartDto);
+    await updateCartMutation.mutate(cartDto);
   };
   const handleRevert = async () => {
     const result = await refetch();
@@ -63,6 +71,18 @@ export default function CartPage() {
     if (result.data) {
       setCartItems(result.data.items);
     }
+  };
+  const handleCheckout = async (cartItems) => {
+    handleUpdateCart(cartItems);
+
+    const buyRequest = {
+      items: cartItems.map((item) => ({
+        productId: item.productId,
+        quantity: item.quantity,
+      })),
+    };
+
+    checkoutMutation.mutate(buyRequest);
   };
   return (
     <>
@@ -140,7 +160,12 @@ export default function CartPage() {
             Update Cart
           </button>
 
-          <button className="btn btn-primary mt-4">Checkout</button>
+          <button
+            className="btn btn-primary mt-4"
+            onClick={() => handleCheckout(cartItems)}
+          >
+            Checkout
+          </button>
         </div>
       </div>
     </>

@@ -1,5 +1,16 @@
 ## Project 2 Inventory Management
 
+- Checkout Page Stripe
+  ![Checkout Page Stripe](Project2InventoryManagement_CheckoutStripe.png)
+  - Order Success Page
+    ![Order Success Page](Project2InventoryManagement_OrderSuccess.png)
+  - Order Success Order Table SQLite
+    ![Order Success Order Table SQLite](Project2InventoryManagement_OrderSuccessOrderTable.png)
+  - Order Success API Postman
+    ![Order Success API Postman](Project2InventoryManagement_OrderSuccessPostman.png)
+  - Order Success Stripe Webhook
+    ![Order Success Stripe Webhook](Project2InventoryManagement_OrderSuccessStripeWebhook.png)
+
 - Product Page Get All
   ![Product Page](Project2InventoryManagement_ProductPage.png)
 - Cart Page Get All

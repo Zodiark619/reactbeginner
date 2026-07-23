@@ -1,8 +1,7 @@
 ﻿using InventoryManagamentAPI.Models;
 using InventoryManagamentAPI.Models.Stripe;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Stripe.Climate;
+using Microsoft.EntityFrameworkCore; 
 using Product = InventoryManagamentAPI.Models.Stripe.Product;
 
 namespace InventoryManagamentAPI.Data
@@ -16,11 +15,11 @@ namespace InventoryManagamentAPI.Data
         #region Stripe
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
-        //public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Product> Products { get; set; }
-        //public DbSet<Order> Orders { get; set; }
+        public DbSet<Order> Orders { get; set; }
         //public DbSet<UserInventory> UserInventories { get; set; }
-        //public DbSet<CardInventory> CardInventories { get; set; }
+        public DbSet<ItemInventory> ItemInventories { get; set; }
 
         #endregion
         public ApplicationDbContext(DbContextOptions options) : base(options)

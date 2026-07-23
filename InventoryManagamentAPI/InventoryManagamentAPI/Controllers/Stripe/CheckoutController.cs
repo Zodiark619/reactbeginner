@@ -1,5 +1,7 @@
 ﻿
 using Humanizer;
+using InventoryManagamentAPI.Data;
+using InventoryManagamentAPI.Models.Stripe;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
@@ -7,9 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Stripe;
 using Stripe.Checkout;
-using Stripe.Climate;
-using StripePortfolio.Data;
-using StripePortfolio.Models;
+//using Stripe.Climate; 
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace StripePortfolio.Controllers
@@ -18,7 +18,7 @@ namespace StripePortfolio.Controllers
     //setx Stripe__SecretKey "sk_live_XXXX"
     //setx Stripe__WebhookSecret "whsec_XXXX"
 
-    [Authorize]
+    //[Authorize]
 
     [ApiController]
     [Route("api/checkout")]
@@ -36,7 +36,7 @@ namespace StripePortfolio.Controllers
         }
 
 
-       
+
         [HttpGet("by-session/{sessionId}")]
         public IActionResult GetOrderBySession(string sessionId)
         {
@@ -47,22 +47,15 @@ namespace StripePortfolio.Controllers
 
             if (order == null)
                 return NotFound();
-            var cards = _db.CardInventories
-    .Include(ci => ci.Card)
-    .ThenInclude(x=>x.Elements)
-    .Include(c=>c.Card.CardTypes)
-    .Include(c=>c.Card.Subtypes)
-    .Include(c=>c.Card.Sets)
-    .Include(c=>c.Card.Rarity) 
-    .Where(ci => ci.OrderId == order.Id)
-    .ToList();
+    
             var dto = new
             {
                 id = order.Id,
                 amount = order.Amount,
                 status = order.Status,
                 createdAt = order.CreatedAt,
-                items = order.Items.Select(i => new {
+                items = order.Items.Select(i => new
+                {
                     product = new
                     {
                         id = i.ProductId,
@@ -71,21 +64,7 @@ namespace StripePortfolio.Controllers
                     quantity = i.Quantity,
                     unitPrice = i.UnitPrice
                 }),
-
-
-
-
-                cards = cards.Select(c => new {
-                    id = c.CardId,
-                    name = c.Card.Name,
-                    element =   string.Join(", ",c.Card.Elements.Select(x=>x.Name)), 
-                    rarity =   string.Join(", ",c.Card.Rarity.Name), 
-                    subtype =   string.Join(", ",c.Card.Subtypes.Select(x=>x.Name)), 
-                    cardtype =   string.Join(", ",c.Card.CardTypes.Select(x=>x.Name)), 
-                    set =   string.Join(", ",c.Card.Sets.Select(x=>x.Name)),  
-                    quantity = c.Quantity,
-                    imageurl=c.Card.ImageUrl
-                })
+ 
             };
 
             return Ok(dto);
@@ -94,6 +73,7 @@ namespace StripePortfolio.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateCheckoutSession([FromBody] BuyRequest req)
         {
+
             if (req?.Items == null || !req.Items.Any())
                 return BadRequest("No items to checkout.");
 
@@ -138,17 +118,19 @@ namespace StripePortfolio.Controllers
                 Mode = "payment",
                 PaymentMethodTypes = new List<string> { "card" },
                 LineItems = lineItems,
-                SuccessUrl = "https://localhost:7237/success?session_id={CHECKOUT_SESSION_ID}",
-                CancelUrl = "https://localhost:7237/cancel"
+                SuccessUrl = "https://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}",
+                CancelUrl = "https://localhost:5173/cancel"
             };
 
             var service = new SessionService();
             var session = await service.CreateAsync(options);
-
+            var user = await _userManager.FindByNameAsync("admin");
+            var userId = user?.Id;
             // Create order record
-            var order = new Models.Order
+            var order = new InventoryManagamentAPI.Models.Stripe.Order
             {
-                UserId = _userManager.GetUserId(User),
+                UserId = userId,
+               // UserId = _userManager.GetUserId(User),
                 Amount = totalAmount,
                 Currency = "usd",
                 StripeCheckoutSessionId = session.Id,

@@ -16,14 +16,9 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\Stripe\CardInventoriesController.cs" />
-    <Compile Remove="Controllers\Stripe\CheckoutController.cs" />
     <Compile Remove="Controllers\Stripe\CheckoutResultController.cs" />
     <Compile Remove="Controllers\Stripe\HistoryController.cs" />
     <Compile Remove="Controllers\Stripe\HomeController.cs" />
-    <Compile Remove="Controllers\Stripe\StripeWebhookController.cs" />
-    <Compile Remove="Models\Stripe\BuyRequest.cs" />
-    <Compile Remove="Models\Stripe\CardInventory.cs" />
-    <Compile Remove="Models\Stripe\Order.cs" />
     <Compile Remove="Models\Stripe\UserInventory.cs" />
   </ItemGroup>
 
@@ -48,6 +43,10 @@
 		<PackageReference Include="Stripe.net" Version="52.1.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.19.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="NewFolder\" />
 	</ItemGroup>
 
 </Project>

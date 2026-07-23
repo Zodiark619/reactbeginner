@@ -1,7 +1,10 @@
 ﻿using InventoryManagamentAPI.Data;
+using InventoryManagamentAPI.Services.Stripe;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Stripe;
+using Stripe.Checkout;
 
 namespace InventoryManagamentAPI.Controllers.Stripe
 {
@@ -11,9 +14,9 @@ namespace InventoryManagamentAPI.Controllers.Stripe
     {
         private readonly ApplicationDbContext _db;
         private readonly IConfiguration _config;
-        private readonly RewardService _rewardService;
+        private readonly IRewardService _rewardService;
 
-        public StripeWebhookController(ApplicationDbContext dbContext, IConfiguration config, RewardService rewardService)
+        public StripeWebhookController(ApplicationDbContext dbContext, IConfiguration config, IRewardService rewardService)
         {
             _db = dbContext;
             _config = config;
@@ -35,16 +38,18 @@ namespace InventoryManagamentAPI.Controllers.Stripe
                     _config["Stripe:WebhookSecret"]
                 );
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return BadRequest();
             }
 
             switch (stripeEvent.Type)
             {
                 case "checkout.session.completed":
-                    var session = stripeEvent.Data.Object as Stripe.Checkout.Session;
-
+                    // var session = stripeEvent.Data.Object as Stripe.Checkout.Session;
+                    var session = stripeEvent.Data.Object as Session;
+                    Console.WriteLine(session);
                     var order = _db.Orders
                           .Include(o => o.Items)
                           .ThenInclude(x => x.Product)
@@ -59,18 +64,14 @@ namespace InventoryManagamentAPI.Controllers.Stripe
                     order.StripePaymentIntentId = session.PaymentIntentId;
                     order.UpdatedAt = DateTime.UtcNow;
 
-                    // Add items to user inventory
-                    //foreach (var item in order.Items)
-                    //{
-                    //     _rewardService.SendContentToInventory(item.Product, order.UserId ,order.Id);
-                    //   }
+                    
                     foreach (var item in order.Items)
                     {
 
 
                         for (int i = 0; i < item.Quantity; i++) // loop per purchased pack
                         {
-                            _rewardService.SendContentToInventory(item.Product, order.UserId, order.Id);
+                           await _rewardService.SendContentToInventory(item.Product, order.UserId, order.Id);
                         }
                     }
                     await _db.SaveChangesAsync();
